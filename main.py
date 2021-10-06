@@ -74,7 +74,8 @@ def test_is_palindrome():
     assert test_is_palindrome(253)==False
     assert test_is_palindrome(545)==True
 
-if __name__=="__main__":
+
+def main():
     while True:
         print('1.Ultimul numar prim mai mic decat un numar dat')
         print('2.Combinari de n luate cate k')
@@ -93,7 +94,8 @@ if __name__=="__main__":
         elif optiune=='3':
             nr1=int(input('Dati un numar: '))
             print(is_palindrome(nr1))
-
+if __name__=="__main__":
+    test_get_largest_prime_below()
 
 
 
