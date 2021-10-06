@@ -42,10 +42,32 @@ def test_get_n_choose_k():
     assert test_get_n_choose_k(12,8)==495
     assert test_get_n_choose_k(14,9)==2002
 
+def is_palindrome(n):
+    '''
+    Determinati daca un numar dat este palindrom
+    :param n: int
+    :return: True daca este palindrom, False in caz contrar
+    '''
+    copie=n
+    ogl=0
+    while copie!=0:
+        ogl=ogl*10+copie%10
+        copie=copie//10
+    if ogl==n:
+        return True
+    return False
+
+def test_is_palindrome():
+    assert test_is_palindrome(565)==True
+    assert test_is_palindrome(1)==True
+    assert test_is_palindrome(253)==False
+    assert test_is_palindrome(545)==True
+
 if __name__=="__main__":
     while True:
         print('1.Ultimul numar prim mai mic decat un numar dat')
         print('2.Combinari de n luate cate k')
+        print('3.Determina daca un numar dat este palindrom')
         print('x.Exit')
         optiune=input('Alegeti o optiune: ')
         if optiune == '1':
@@ -57,6 +79,11 @@ if __name__=="__main__":
              nrk=int(input('dati al doilea numar: '))
              comb= get_n_choose_k(nrn,nrk)
              print(f'Combinari de {nrn} luate cate {nrk} este {comb}')
+        elif optiune=='3':
+            nr1=int(input('Dati un numar: '))
+            print(is_palindrome(nr1))
+
+
 
 
 
