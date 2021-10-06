@@ -48,10 +48,10 @@ def get_n_choose_k(n,k):
     return x//y
 
 def test_get_n_choose_k():
-    assert test_get_n_choose_k(5,3)==10
-    assert test_get_n_choose_k(8,2)==28
-    assert test_get_n_choose_k(12,8)==495
-    assert test_get_n_choose_k(14,9)==2002
+    assert get_n_choose_k(5,3)==10
+    assert get_n_choose_k(8,2)==28
+    assert get_n_choose_k(12,8)==495
+    assert get_n_choose_k(14,9)==2002
 
 def is_palindrome(n):
     '''
@@ -69,10 +69,10 @@ def is_palindrome(n):
     return False
 
 def test_is_palindrome():
-    assert test_is_palindrome(565)==True
-    assert test_is_palindrome(1)==True
-    assert test_is_palindrome(253)==False
-    assert test_is_palindrome(545)==True
+    assert is_palindrome(565)==True
+    assert is_palindrome(1)==True
+    assert is_palindrome(253)==False
+    assert is_palindrome(545)==True
 
 
 def main():
@@ -95,7 +95,12 @@ def main():
             nr1=int(input('Dati un numar: '))
             print(is_palindrome(nr1))
 if __name__=="__main__":
-    test_get_largest_prime_below()
+  test_get_largest_prime_below()
+  test_get_n_choose_k()
+  test_is_palindrome()
+
+
+
 
 
 
