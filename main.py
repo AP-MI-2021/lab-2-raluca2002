@@ -1,3 +1,18 @@
+def is_prime (x):
+    '''
+    verificam daca un numar este prim
+    :param x:int
+    :return:True daca este prim, False in caz contrar
+    '''
+    if x<2:
+      return False
+    if x==2:
+      return True
+    for i in range(2,x):
+      if x%i==0:
+       return False
+    return True
+
 def get_largest_prime_below(n):
     '''
     Gaseste ultimul numar prim mai mic decat un numar dat
@@ -6,14 +21,10 @@ def get_largest_prime_below(n):
     Output:
     -x,ultimul numar prim mai mic decat n
     '''
-    for i in range(2,n):
-        p=1
-        for d in range(2,n//2+1):
-            if i%d==0:
-                p=0
-            if p==1:
-                x=i
-    return x
+    for i in range(n-1,2,-1):
+        if is_prime(i):
+            return i
+    return 0
 
 def test_get_largest_prime_below():
     assert get_largest_prime_below(5)==3
