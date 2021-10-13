@@ -95,9 +95,11 @@ def main():
             nr1=int(input('Dati un numar: '))
             print(is_palindrome(nr1))
 if __name__=="__main__":
-  test_get_largest_prime_below()
-  test_get_n_choose_k()
-  test_is_palindrome()
+   test_get_largest_prime_below()
+   test_get_n_choose_k()
+   test_is_palindrome()
+   main()
+
 
 
 

@@ -1,0 +1,19 @@
+def get_largest_prime_below(n):
+  '''
+  Ultimul numar prim mai mic decat un numar dat
+  Input:
+  -n:int
+  Output:
+  -cel mai mare numar prim mai mic decat n
+  '''
+  m=1
+  d=2
+  while d<=n//2 :
+    if n%d==0 :
+       m=0
+    d=d+1
+  return m
+
+ def main():
+  
+
